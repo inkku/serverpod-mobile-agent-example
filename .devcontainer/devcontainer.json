@@ -1,0 +1,14 @@
+{
+  "name": "RememberBy mobile agent demo",
+  "build": { "dockerfile": "Dockerfile" },
+  "remoteUser": "vscode",
+  "forwardPorts": [9995],
+  "portsAttributes": {
+    "9995": { "label": "RememberBy private preview", "onAutoForward": "notify" },
+    "8280": { "onAutoForward": "ignore" },
+    "8281": { "onAutoForward": "ignore" },
+    "8290": { "onAutoForward": "ignore" }
+  },
+  "postCreateCommand": "bash tool/control.sh setup",
+  "postStartCommand": "bash tool/control.sh start"
+}

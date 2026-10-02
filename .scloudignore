@@ -1,0 +1,11 @@
+.git/**
+.github/**
+.devcontainer/**
+.runtime/**
+**/.serverpod/**
+**/config/passwords*.yaml
+**/.dart_tool/**
+**/build/**
+**/.git/**
+docs/**
+tool/**

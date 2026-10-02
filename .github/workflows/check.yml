@@ -1,0 +1,19 @@
+name: Demo checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.44.4'
+          channel: stable
+          cache: true
+      - run: bash tool/control.sh setup
+      - run: bash tool/control.sh check
+      - run: bash tool/control.sh build

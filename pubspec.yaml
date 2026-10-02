@@ -1,0 +1,10 @@
+name: _
+publish_to: none
+
+environment:
+  sdk: '^3.12.2'
+
+workspace:
+  - rememberby_demo_client
+  - rememberby_demo_server
+  - rememberby_demo_flutter

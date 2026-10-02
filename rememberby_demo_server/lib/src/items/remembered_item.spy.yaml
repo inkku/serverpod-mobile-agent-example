@@ -1,0 +1,9 @@
+class: RememberedItem
+table: remembered_item
+fields:
+  ownerId: String
+  text: String
+  createdAt: DateTime
+indexes:
+  remembered_item_owner_idx:
+    fields: ownerId

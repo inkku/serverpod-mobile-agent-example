@@ -1,0 +1,32 @@
+name: Tester feedback
+description: Report what happened while testing the mobile-first workflow
+title: '[Tester] '
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Commit, device and browser
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Where were you testing?
+      options:
+        - Fresh Codespace setup
+        - Private preview
+        - Cloud signup or authentication
+        - Cloud deployment
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Steps, expected result and actual result
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Redacted evidence
+      description: Never include passwords, verification codes, tokens or personal data.
