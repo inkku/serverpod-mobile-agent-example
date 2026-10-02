@@ -49,5 +49,6 @@ void run(List<String> args) async {
   );
 
   // Start the server.
+  pod.webServer.addRoute(FlutterRoute(Directory('web/app')), '/');
   await pod.start();
 }
