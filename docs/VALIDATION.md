@@ -39,3 +39,5 @@ The original Codespace could not push to the separate public repository (403, re
 The generated Docker Compose file was removed because this demo uses Serverpod's local PostgreSQL dataPath. No Docker bootstrap passwords are included. The new CI workflow is intended to run the same setup, checks and web build; its remote result is recorded separately.
 
 The article draft is withheld for owner review and is not part of this public release.
+
+A clean CI checkout caught a Serverpod import ambiguity in the added Flutter web route. The import was narrowed to `FlutterRoute`; CI is being rerun. This is why local preview checks and clean-environment checks are both useful.
